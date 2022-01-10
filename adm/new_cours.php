@@ -12,6 +12,7 @@ if(isset($_POST['ncour']) && $_SERVER['REQUEST_METHOD'] == "POST"){
      $modul= majid($_POST['modul']);
       $type= majid($_POST['type']);
        $dis= majid($_POST['dis']);
+       $flr= majid($_POST['flr']);
      
         ;
             $status="non";
@@ -28,17 +29,14 @@ if(isset($_POST['ncour']) && $_SERVER['REQUEST_METHOD'] == "POST"){
        if(in_array( $ex,$alow)) {
         
           
-       
-         
-           
+  
 if(empty($title) || empty($dis) || empty($path)   ){
     $err="<div class='alert alert-danger'>file empty</div>";
 }else{
     
-    $stmt=$conn->prepare("INSERT INTO `cour` (`id`, `title`, `module`, `type`, `discription`, `lien`, `status`,`autor`) VALUES (NULL, ?, ?, ?,?, ?, ?,?)");
-    $stmt->execute([$title,$modul,$type,$dis,$path,$status,$autor]);
-    
-    
+    $stmt=$conn->prepare("INSERT INTO `cour` (`id`, `title`, `module`, `type`, `discription`, `flr`,`lien`, `status`,`autor`) VALUES (NULL, ?, ?,?,?, ?, ?, ?,?)");
+    $stmt->execute([$title,$modul,$type,$dis,$flr,$path,$status,$autor]);
+     
 if($stmt){
     
     $err="<div class='alert alert-success'>data has been insert </div>";
@@ -116,15 +114,23 @@ if($stmt){
                                 <div class="form-group row">
                                     <label for="full_name" class="col-md-4 col-form-label text-md-right">le module</label>
                                     <div class="col-md-6">
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="modul" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
-                                <option >comptabilite analytique</option>
-                                <option>comptabilite des societes</option>
-                                <option >math financiere</option>
-                              </select>
+                                    <input class="form-control" type="text" name="modul" id="example-text-input">
                                 </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">filière</label>
+                                    <div class="col-md-6">
+                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="flr" id="inlineFormCustomSelect">
+                                <option selected>....</option>
+                                <option >Gestion des entreprises</option>
+                                <option>assistante administrative</option>
+                                <option >génie civil</option>
+                                <option >diagnostic automobile</option>
+                                <option >infrastructure digitale</option>
+                              </select>
+                                </div>
+                                </div>
                                 
                                 
                                 

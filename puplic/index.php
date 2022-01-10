@@ -48,7 +48,18 @@ $m= intval( $_GET['m']);
            }
             p{
                font-family: tst ;
-           }     
+           }  
+           .bac{
+         
+           }
+            body {
+	margin:0;
+   background-image: url("../img/c.jpg");
+
+	background-size: cover;
+	font:600 16px/18px 'Open Sans',sans-serif;
+  
+           }   
      </style>
      
     <body>
@@ -58,10 +69,12 @@ $m= intval( $_GET['m']);
         
         <div class="container col-10" >
        
-                  <div class="card text-center">
+                  <div class="card text-center ">
   <div class="card-header">
    <?php 
-if($m == 1){echo 'comptabilite analytique'; }elseif ($m == 2){echo 'comptabilite des societes'; }elseif ($m == 3) {
+if($m == 1){echo 'comptabilite analytique'; 
+}elseif ($m == 2){echo 'comptabilite des societes'; 
+}elseif ($m == 3) {
           
      echo 'travux fin exrcice';  }  ?>
   </div>
@@ -74,22 +87,26 @@ if($m == 1){echo 'comptabilite analytique'; }elseif ($m == 2){echo 'comptabilite
                       <br>
  
             </div>
-            <br><br>
+            <br>
             
             
-                  <div class="card text-center">
+                  <div class="card text-center ">
   <div class="card-header">
     <?php 
     if($m == 1){echo 'comptabilite analytique'; }elseif ($m == 2){echo 'comptabilite des societes'; }elseif ($m == 3) {
           
      echo 'math financiere';  }  ?>
-  </div>
+  </div><br>
                       <br>
   <div class="card-block">
     <h4 class="card-title"><i class="far fa-file-word"></i> Documment </h4>
     <p class="card-text">Espace pour les documents , pdf , word , excel , Vous pouvez lire et télécharger</p>
-    <a href="../puplic/document.php?m=<?php echo $m;?>" class="btn btn-primary"> Aller aux document </a>
-  </div><br>
+   <a href="document.php?m=1"><button type="button" class="btn btn-sm  btn-primary">Gestion des entreprises</button></a> 
+   <a href="document.php?m=2"><button type="button" class="btn  btn-sm btn-success">assistante administrative</button></a>
+   <a href="document.php?m=3"><button type="button" class="btn btn-sm btn-danger">génie civil </button></a>
+<a href="document.php?m=4" ><button type="button" class="btn btn-sm btn-warning">diagnostic automobile</button></a>
+<a href="document.php?m=5"><button type="button" class="btn btn-sm btn-info">infrastructure digitale</button></a>
+   </div><br><br><br>
  
 </div>
            

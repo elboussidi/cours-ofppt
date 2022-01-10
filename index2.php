@@ -51,23 +51,9 @@ session_start() ;
       <li class="nav-item">
         <a class="nav-link" href="#"> <i class="fas fa-file-signature"></i> contact us</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      
-<i class="fas fa-window-restore"></i> les Module
-
-
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="../puplic/index.php?m=1">">comptabilité generale</a>
-            <a class="dropdown-item" href="../puplic/index.php?m=2">">managment</a>
-            
-            <a class="dropdown-item" href="../puplic/index.php?m=3">">PIE</a>
-            <a class="dropdown-item " href="../puplic/index.php?m=4">">soft skils</a>
-            <a class="dropdown-item" href="../puplic/index.php?m=5">">l'informatique</a>
-            <a class="dropdown-item" href="../puplic/index.php?m=6">">arabe</a>
-       
-        </div>
+ 
+      <li class="nav-item">
+      <a class="nav-link " href="puplic/index.php"> <i class="fa fa-graduation-cap"></i> filière</a>
       </li>
     </ul>
   </div>

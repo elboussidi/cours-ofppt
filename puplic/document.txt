@@ -5,13 +5,13 @@ if(isset($_GET['m'])){
     
     $m= intval( $_GET['m']);
     
-    if($m== 1){$m="Gestion des entreprises";}elseif ($m==2) {$m="assistante administrative";}elseif ($m==3) {$m="genie civil"; }
+    if($m== 1){$m="comptabilite analytique";}elseif ($m==2) {$m="comptabilite des societes";}elseif ($m==3) {$m="math financiere"; }
         
    
-    elseif ($m==4) {$m="diagnostic automobile"; }elseif ($m==5) {$m="infrastructure digitale"; }
+        
     
     
-    $stmt=$conn->prepare("SELECT * FROM `cour` WHERE `type`='document' AND `flr`= ? AND status='oui'");
+    $stmt=$conn->prepare("SELECT * FROM `cour` WHERE `type`='document' AND `module`= ? AND status='oui'");
     $stmt->execute([$m]);
     $data=$stmt->fetchAll();
     $to=$stmt->rowCount();
@@ -62,9 +62,6 @@ if(isset($_GET['m'])){
         <?php include '../indexp.php'; ?>
         
        
-
-
-
         <div class="btn btn-info " style="margin-left:20%;"><?php echo $to; ?> </div>
         <table class="table table-striped">
   <thead>

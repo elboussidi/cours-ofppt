@@ -16,7 +16,7 @@
  if($_SESSION){  ?>
       <div>
           <a class="btn btn-outline-primary btn-sm" href="../adm/index.php"><i class="fas fa-user-tie"></i> <?php echo $_SESSION['name']; ?> </a>
-            <a class="btn btn-outline-danger btn-sm" href="out.php"><i class="fas fa-power-off"></i>  déconnecter</a
+            <a class="btn btn-outline-danger btn-sm" href="http://cours-ofppt.web1337.net/adm/out.php"><i class="fas fa-power-off"></i>  déconnecter</a
                 
              </div>
      
@@ -41,22 +41,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fas fa-file-signature"></i> contact us</a>
       </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="puplic/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        
-<i class="far fa-file-word"></i>  les Module
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-        <a class="dropdown-item" href="index.php?m=1">comptabilité generale</a>
-            <a class="dropdown-item" href="index.php?m=2">managment</a>
-            
-            <a class="dropdown-item" href="index.php?m=3">PIE</a>
-            <a class="dropdown-item " href="index.php?m=4">soft skils</a>
-            <a class="dropdown-item" href="index.php?m=5">l'informatique</a>
-            <a class="dropdown-item" href="index.php?m=6">arabe</a>
-  
-        </div>
+      <li class="nav-item">
+      <a class="nav-link " href="puplic/index.php"> <i class="fa fa-graduation-cap"></i> filière</a>
       </li>
     </ul>
   </div>
