@@ -19,7 +19,7 @@ if(isset($_POST['ncour']) && $_SERVER['REQUEST_METHOD'] == "POST"){
          $ex= end(explode('.', $_FILES['file']['name'] )) ;
             $nimg= rand(0, 1000000).".".$ex;
             
-      $path='elboussidi.eb2a.com/ofppt/doc/'.$nimg ;// رابط الحفض
+      $path='http://cours-ofppt.web1337.net/doc/'.$nimg ;// رابط الحفض
      $dir="../doc/".$nimg; // مكان الرفع 
     move_uploaded_file($_FILES['file']['tmp_name'],$dir);// نقل الملف
     
@@ -34,7 +34,7 @@ if(empty($title) || empty($dis) || empty($path)   ){
     $err="<div class='alert alert-danger'>file empty</div>";
 }else{
     
-    $stmt=$conn->prepare("INSERT INTO `cour` (`id`, `title`, `module`, `type`, `discription`, `flr`,`lien`, `status`,`autor`) VALUES (NULL, ?, ?,?,?, ?, ?, ?,?)");
+    $stmt=$conn->prepare("INSERT INTO `cour` (`id`, `title`, `module`, `type`, `discription`, `flr`,`lien`, `status`,`autor` ,`date`) VALUES (NULL, ?, ?,?,?, ?, ?, ?,?, CURRENT_TIMESTAMP)");
     $stmt->execute([$title,$modul,$type,$dis,$flr,$path,$status,$autor]);
      
 if($stmt){
@@ -201,7 +201,7 @@ if($st == "ADMIN" || $st == "member"){
 }else{
     
     echo '  <div class="ui active inverted dimmer">
-    <div class="ui indeterminate text loader" style="color:red ;">no admin  redirect 
+    <div class="ui indeterminate text loader" style="color:red ;">Vous navez pas le droit dadministrateur
 <i class="fas fa-times"></i></i></div>
   </div>
   <p></p>
@@ -213,7 +213,7 @@ if($st == "ADMIN" || $st == "member"){
 }else{
     
     echo '  <div class="ui active inverted dimmer">
-    <div class="ui indeterminate text loader" style="color:red ;">no admin  redirect 
+    <div class="ui indeterminate text loader" style="color:red ;">Vous navez pas le droit dadministrateur
 <i class="fas fa-times"></i></i></div>
   </div>
   <p></p>

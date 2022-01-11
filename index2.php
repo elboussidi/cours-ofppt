@@ -53,7 +53,7 @@ session_start() ;
       </li>
  
       <li class="nav-item">
-      <a class="nav-link " href="puplic/index.php"> <i class="fa fa-graduation-cap"></i> filière</a>
+      <a class="nav-link " href="../puplic/index.php"> <i class="fa fa-graduation-cap"></i> filière</a>
       </li>
     </ul>
   </div>

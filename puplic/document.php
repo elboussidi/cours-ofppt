@@ -65,16 +65,14 @@ if(isset($_GET['m'])){
 
 
 
-        <div class="btn btn-info " style="margin-left:20%;"><?php echo $to; ?> </div>
+        <div class="btn btn-info " style="margin-left:20%;"><?php echo $m; ?> </div>  <div class="btn btn-info " style="margin-left:20%;"><?php echo $to; ?> </div>
         <table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
-      <th>éditeur</th>
       <th>Titre</th>
-      <th>description</th>
       <th>les modules </th>
-      <th>vue </th>
+      <th>details</th>
+      <th>telecharger </th>
      
       
     </tr>
@@ -92,11 +90,11 @@ if(isset($_GET['m'])){
   
       
     <tr>
-      <th scope="row"><?php echo  $row['id']; ?></th>
-      <td><?php echo $row['autor']; ?></td>
-      <td><?php echo $row['title']; ?></td>
-      <td><?php echo $row['discription']; ?></td>
+     
+      <td scope="row" ><?php echo $row['title']; ?></td>
       <td><?php echo $row['module']; ?></td>
+      
+      <td><a href="<?php echo'details.php?more='. $row['id']; ?>"><i class="fa fa-eye" aria-hidden="true"></i> plus</a></td>
       <td><a href="<?php echo'http://'. $row['lien']; ?>"><i class="fas fa-download"></i> télécharger</a></td>
      
    

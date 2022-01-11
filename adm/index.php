@@ -149,7 +149,7 @@ if($st == "ADMIN"){
 }}else{
     
     echo '  <div class="ui active inverted dimmer">
-    <div class="ui indeterminate text loader" style="color:red ;">no admin redirect 
+    <div class="ui indeterminate text loader" style="color:red ;">
 <i class="fas fa-times"></i></i></div>
   </div>
   <p></p>

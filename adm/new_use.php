@@ -206,7 +206,7 @@ if(isset($_POST['reg']) && $_SERVER['REQUEST_METHOD'] =="POST"){
                             <label for="password" class="col-form-label">mote de pass</label>
                             <input type="password" id="present_address" class="form-control" name="password">
                             <div class="password-feedback">
-                            <input type="file" name="file" style="visibility: hidden;" >
+                            <input type="file" name="file" style="display:non;" >
                             </div>
                         </div>
                         <div class="form-group">
@@ -226,6 +226,10 @@ if(isset($_POST['reg']) && $_SERVER['REQUEST_METHOD'] =="POST"){
         </div>
         </form>
 </div>
+
+
+
+
 
 
 
